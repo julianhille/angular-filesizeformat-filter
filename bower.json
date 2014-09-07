@@ -1,0 +1,29 @@
+{
+  "name": "angular-filesizeformat-filter",
+  "version": "1.0.0",
+  "description": "Filesizeformat for angularJS. Provides a template filter to return human readable filesizeformat",
+  "author": "Julian Hille",
+  "license": "MIT",
+  "homepage": "https://github.com/julianhille/angular-filesizeformat-filter",
+  "authors": [
+    "Julian Hille <j.hille484+os@gmail.com>"
+  ],
+  "keywords": [
+    "angular",
+    "human-readable",
+    "filesizeformat"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": "build/lib/filesizeformat.js",
+  "devDependencies": {
+    "angular": "~1.2.23",
+    "angular-mocks": "~1.2.23",
+    "angular-route": "~1.2.23"
+  }
+}
