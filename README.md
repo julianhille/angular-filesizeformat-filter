@@ -38,3 +38,7 @@ default == false
 
 #### precision
 precision of floating point (count of decimal places)
+
+# TODO
+Add tests with ( use travis)
+
