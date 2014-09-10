@@ -38,3 +38,10 @@ default == false
 
 #### precision
 precision of floating point (count of decimal places)
+<<<<<<< HEAD
+=======
+
+# TODO
+Add tests with ( use travis)
+
+>>>>>>> release/v1.0.2

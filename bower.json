@@ -1,6 +1,6 @@
 {
   "name": "angular-filesizeformat-filter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Filesizeformat for angularJS. Provides a template filter to return human readable filesizeformat",
   "author": "Julian Hille",
   "license": "MIT",
