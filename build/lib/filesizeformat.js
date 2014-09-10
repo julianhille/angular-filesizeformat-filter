@@ -1,14 +1,16 @@
 (function() {
-    angular.module("jh.filesizeformat", [], function($filterProvider) {
-        $filterProvider.register("filesizeformat", function() {
-            return function filesizeformat(bytes, binary, precision) {
-                /*
-                    Javascript filesizeformater.
-                    Inspired by jinja2 and some gists.
+    'use strict';
+    angular.module('jh.filesizeformat', [])
 
-                    @version 1.0.1
-                    @copyright 2014 Julian Hille
-                    @author Julian Hille
+        .filter('filesizeformat', [ function () {
+            return function (bytes, binary, precision) {
+                /*
+                 Javascript filesizeformater.
+                 Inspired by jinja2 and some gists.
+
+                 @version 1.0.2
+                 @copyright 2014 Julian Hille
+                 @author Julian Hille
                  */
                 binary = typeof binary !== 'undefined' ? binary : false;
                 precision = typeof precision !== 'undefined' ? precision : 2;
@@ -22,9 +24,9 @@
                     (binary ? 'EiB' : 'EB'),
                     (binary ? 'ZiB' : 'ZB'),
                     (binary ? 'YiB' : 'YB')
-                ]
+                ];
                 if (!isFinite(bytes)) {
-                  return '- Bytes';
+                    return '- Bytes';
                 }
                 else if (bytes == 1) {
                     return '1 Byte';
@@ -33,13 +35,9 @@
                     return bytes + ' Bytes';
                 }
                 var index = Math.floor(Math.log(bytes) / Math.log(base));
-                return parseFloat((bytes / Math.pow(base, Math.floor(index))).toFixed(precision)).toString() +  ' ' + prefixes[index-1];
+                return parseFloat((bytes / Math.pow(base, Math.floor(index))).toFixed(precision)).toString() + ' ' + prefixes[index - 1];
             }
 
-        });
-    });
-
-
-}).call(this);
-
-//# sourceMappingURL=named-routes.js.map
+        }]
+    );
+})();
